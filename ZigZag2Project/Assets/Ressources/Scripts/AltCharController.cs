@@ -5,6 +5,7 @@ using UnityEngine;
 public class AltCharController : MonoBehaviour {
 
     public Transform rayOrigin;
+    public GameObject gemPopEffect;
 
     private Rigidbody rb;
     private bool facingRight = true;
@@ -70,20 +71,19 @@ public class AltCharController : MonoBehaviour {
         if(other.tag == "basicGem")
         {
             gameManager.IncreaseScore(1);
-            Debug.Log("basicGem +1");
         }
         else if (other.tag == "mediumGem")
         {
             gameManager.IncreaseScore(4);
-            Debug.Log("mediumGem +4");
         }
         else if (other.tag == "bigGem")
         {
             gameManager.IncreaseScore(10);
-            Debug.Log("bigGem +10");
         }
-        Destroy(other.gameObject);
-        Debug.Log("Destroyed: " + other.tag);
         
+        GameObject pop = Instantiate(gemPopEffect, rayOrigin.transform.position, Quaternion.identity);
+        Destroy(pop, 2);
+        Destroy(other.gameObject);
+
     }
 }

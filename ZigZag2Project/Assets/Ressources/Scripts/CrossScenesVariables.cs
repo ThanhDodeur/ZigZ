@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class CrossScenesVariables : MonoBehaviour {
 
+    public int score;
+    public int best;
+    
     private void Awake()
     {
         // conserve l'objet entre chaque scenes.
