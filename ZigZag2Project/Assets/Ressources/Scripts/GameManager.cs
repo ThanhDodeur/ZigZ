@@ -10,4 +10,12 @@ public class GameManager : MonoBehaviour {
     {
         gameStarted = true;
     }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            StartGame();
+        }
+    }
 }

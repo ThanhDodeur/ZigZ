@@ -20,6 +20,15 @@ public class AltCharController : MonoBehaviour {
 
     private void FixedUpdate()
     {
+        if (!gameManager.gameStarted)
+        {
+            return;
+        }
+        else
+        {
+            animator.SetTrigger("gameStarted");
+        }
+
         rb.transform.position = transform.position + transform.forward * 2 * Time.deltaTime;
     }
     // Update is called once per frame
