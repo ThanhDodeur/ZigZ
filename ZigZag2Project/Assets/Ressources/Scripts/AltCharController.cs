@@ -44,6 +44,10 @@ public class AltCharController : MonoBehaviour {
         {
             animator.SetTrigger("noGround");
         }
+        if(transform.position.y < -10)
+        {
+            gameManager.EndGame();
+        }
 	}
 
     private void changeDir()

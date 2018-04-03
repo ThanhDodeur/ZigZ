@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
@@ -9,6 +10,11 @@ public class GameManager : MonoBehaviour {
     public void StartGame()
     {
         gameStarted = true;
+    }
+
+    public void EndGame()
+    {
+        SceneManager.LoadScene("End");
     }
 
     private void Update()
