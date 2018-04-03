@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class AltCharController : MonoBehaviour {
 
+    public Transform rayOrigin;
+
     private Rigidbody rb;
     private bool facingRight = true;
+    private Animator animator;
 
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
+        animator = GetComponent<Animator>();
     }
 
     private void FixedUpdate()
@@ -21,6 +25,13 @@ public class AltCharController : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Space))
         {
             changeDir();
+        }
+
+        RaycastHit hit;
+
+        if(!Physics.Raycast(rayOrigin.position, -transform.up, out hit, 200))
+        {
+            animator.SetTrigger("noGround");
         }
 	}
 
