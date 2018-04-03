@@ -10,4 +10,4 @@ Project to test animation, procedural generation and small 3D controls.
 
 Start game: A
 
-Turn: Spacebar
+Turn: E

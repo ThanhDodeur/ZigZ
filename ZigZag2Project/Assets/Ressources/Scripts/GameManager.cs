@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour {
     public void StartGame()
     {
         gameStarted = true;
+        FindObjectOfType<RoadGenerator>().begingGeneration();
     }
 
     public void EndGame()

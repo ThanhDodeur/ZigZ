@@ -449,12 +449,12 @@ Prefab:
     - target: {fileID: 224960526921536764, guid: 379f51446706ecb4fba14953085cd9ae,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 369
+      value: -51
       objectReference: {fileID: 0}
     - target: {fileID: 224960526921536764, guid: 379f51446706ecb4fba14953085cd9ae,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -254
+      value: 27
       objectReference: {fileID: 0}
     - target: {fileID: 224960526921536764, guid: 379f51446706ecb4fba14953085cd9ae,
         type: 2}
@@ -469,22 +469,22 @@ Prefab:
     - target: {fileID: 224960526921536764, guid: 379f51446706ecb4fba14953085cd9ae,
         type: 2}
       propertyPath: m_AnchorMin.x
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224960526921536764, guid: 379f51446706ecb4fba14953085cd9ae,
         type: 2}
       propertyPath: m_AnchorMin.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224960526921536764, guid: 379f51446706ecb4fba14953085cd9ae,
         type: 2}
       propertyPath: m_AnchorMax.x
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224960526921536764, guid: 379f51446706ecb4fba14953085cd9ae,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224960526921536764, guid: 379f51446706ecb4fba14953085cd9ae,
         type: 2}
@@ -505,18 +505,28 @@ Prefab:
         type: 2}
       propertyPath: buttonText
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114841552029824508, guid: 379f51446706ecb4fba14953085cd9ae,
+        type: 2}
+      propertyPath: buttonText
+      value: 
       objectReference: {fileID: 523090084}
+    - target: {fileID: 114418501831623598, guid: 379f51446706ecb4fba14953085cd9ae,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 1092571994}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 379f51446706ecb4fba14953085cd9ae, type: 2}
   m_IsPrefabParent: 0
 --- !u!224 &523090083 stripped
 RectTransform:
-  m_PrefabParentObject: {fileID: 224960526921536764, guid: 379f51446706ecb4fba14953085cd9ae,
+  m_PrefabParentObject: {fileID: 224817934647036768, guid: 379f51446706ecb4fba14953085cd9ae,
     type: 2}
   m_PrefabInternal: {fileID: 523090082}
 --- !u!1 &523090084 stripped
 GameObject:
-  m_PrefabParentObject: {fileID: 1291981875235636, guid: 379f51446706ecb4fba14953085cd9ae,
+  m_PrefabParentObject: {fileID: 1343970618519744, guid: 379f51446706ecb4fba14953085cd9ae,
     type: 2}
   m_PrefabInternal: {fileID: 523090082}
 --- !u!1 &857914933
