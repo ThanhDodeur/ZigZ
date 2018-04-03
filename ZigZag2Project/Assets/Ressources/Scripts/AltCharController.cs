@@ -9,11 +9,13 @@ public class AltCharController : MonoBehaviour {
     private Rigidbody rb;
     private bool facingRight = true;
     private Animator animator;
+    private GameManager gameManager;
 
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
+        gameManager = FindObjectOfType<GameManager>();
     }
 
     private void FixedUpdate()
