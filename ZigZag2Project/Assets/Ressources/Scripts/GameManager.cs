@@ -2,10 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
 
+    public int score;
     public bool gameStarted;
+    public Text scoreText;
 
     public void StartGame()
     {
@@ -23,5 +26,11 @@ public class GameManager : MonoBehaviour {
         {
             StartGame();
         }
+    }
+
+    public void IncreaseScore(int value)
+    {
+        score += value;
+        scoreText.text = score.ToString();
     }
 }

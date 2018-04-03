@@ -52,11 +52,38 @@ public class AltCharController : MonoBehaviour {
 
     private void changeDir()
     {
+        if (!gameManager.gameStarted)
+        {
+            return;
+        }
+
         facingRight = !facingRight;
 
         if (facingRight)        
             transform.rotation = Quaternion.Euler(0, 45, 0);
         else       
             transform.rotation = Quaternion.Euler(0, -45, 0);        
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "basicGem")
+        {
+            gameManager.IncreaseScore(1);
+            Debug.Log("basicGem +1");
+        }
+        else if (other.tag == "mediumGem")
+        {
+            gameManager.IncreaseScore(4);
+            Debug.Log("mediumGem +4");
+        }
+        else if (other.tag == "bigGem")
+        {
+            gameManager.IncreaseScore(10);
+            Debug.Log("bigGem +10");
+        }
+        Destroy(other.gameObject);
+        Debug.Log("Destroyed: " + other.tag);
+        
     }
 }
