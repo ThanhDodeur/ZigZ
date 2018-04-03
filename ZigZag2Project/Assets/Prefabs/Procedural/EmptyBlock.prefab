@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 23962028213076154}
   - component: {fileID: 114205233395711752}
   m_Layer: 0
-  m_Name: BlockBig
+  m_Name: EmptyBlock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -63,7 +63,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4161394310286900
 Transform:
   m_ObjectHideFlags: 1

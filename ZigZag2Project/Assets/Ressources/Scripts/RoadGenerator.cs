@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class RoadGenerator : MonoBehaviour {
 
+    public GameObject empty;
     public GameObject small;
     public GameObject medium;
     public GameObject big;
@@ -37,9 +38,10 @@ public class RoadGenerator : MonoBehaviour {
         // RNG pour les valeurs des gemmes.
         float randScore = Random.Range(0, 1000 + growth);
         float bigChance = 10.0f + growth;
-        float mediumChance = 300.0f + growth;
+        float mediumChance = 200.0f + growth;
+        float smallChance = 700.0f + growth;
 
-        if(randScore < bigChance)
+        if (randScore < bigChance)
         {
             GameObject newRoad = Instantiate(big, spawnPos, Quaternion.Euler(0, 45, 0));
             lastPos = newRoad.transform.position;
@@ -49,9 +51,14 @@ public class RoadGenerator : MonoBehaviour {
             GameObject newRoad = Instantiate(medium, spawnPos, Quaternion.Euler(0, 45, 0));
             lastPos = newRoad.transform.position;
         }
-        else if (randScore >= mediumChance)
+        else if (randScore < smallChance)
         {
             GameObject newRoad = Instantiate(small, spawnPos, Quaternion.Euler(0, 45, 0));
+            lastPos = newRoad.transform.position;
+        }
+        else if (randScore >= smallChance)
+        {
+            GameObject newRoad = Instantiate(empty, spawnPos, Quaternion.Euler(0, 45, 0));
             lastPos = newRoad.transform.position;
         }
 

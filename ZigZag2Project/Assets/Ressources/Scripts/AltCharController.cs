@@ -7,6 +7,10 @@ public class AltCharController : MonoBehaviour {
     public Transform rayOrigin;
     public GameObject gemPopEffect;
 
+    public AudioSource smallCoinSound;
+    public AudioSource mediumCoinSound;
+    public AudioSource bigCoinSound;
+
     private Rigidbody rb;
     private bool facingRight = true;
     private Animator animator;
@@ -71,14 +75,17 @@ public class AltCharController : MonoBehaviour {
         if(other.tag == "basicGem")
         {
             gameManager.IncreaseScore(1);
+            smallCoinSound.Play();
         }
         else if (other.tag == "mediumGem")
         {
             gameManager.IncreaseScore(4);
+            mediumCoinSound.Play();
         }
         else if (other.tag == "bigGem")
         {
             gameManager.IncreaseScore(10);
+            bigCoinSound.Play();
         }
         
         GameObject pop = Instantiate(gemPopEffect, rayOrigin.transform.position, Quaternion.identity);

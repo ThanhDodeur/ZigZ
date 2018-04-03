@@ -10,9 +10,11 @@ public class GameManager : MonoBehaviour {
     public bool gameStarted;
     public Text scoreText;
     public Text bestScore;
+    private GameObject crossScenesVariables;
 
     private void Awake()
     {
+        crossScenesVariables = GameObject.Find("CrossScenesVariables");
         bestScore.text = "Best: " + GetBest().ToString();       
     }
 
@@ -23,8 +25,8 @@ public class GameManager : MonoBehaviour {
     }
 
     public void EndGame()
-    {
-        GameObject crossScenesVariables = GameObject.Find("CrossScenesVariables");
+    {       
+        // null pointer si le jeu est lanc� hors de l'�cran titre car crossScenesVariables est instanci� dans la sc�ne pr�c�dente.
         crossScenesVariables.GetComponent<CrossScenesVariables>().score = 0 + score;
         SceneManager.LoadScene("End");
     }
