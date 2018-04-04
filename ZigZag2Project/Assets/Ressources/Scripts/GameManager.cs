@@ -26,7 +26,7 @@ public class GameManager : MonoBehaviour {
 
     public void EndGame()
     {       
-        // null pointer si le jeu est lanc� hors de l'�cran titre car crossScenesVariables est instanci� dans la sc�ne pr�c�dente.
+        // null pointer si le jeu est lance hors de l'ecran titre car crossScenesVariables est instancie dans la scene precedente.
         crossScenesVariables.GetComponent<CrossScenesVariables>().score = 0 + score;
         SceneManager.LoadScene("End");
     }
